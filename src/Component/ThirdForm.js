@@ -16,7 +16,7 @@ function ThirdForm({
             </div>
             <div className='form-workspace-select-section'>
                 <div className='form-select-cards' onChange={(e) => setWorkspaceUses(e.target.defaultValue)}>
-                    <input type="radio" name="uses" value="Self" id="self" className='form-radio-button' />
+                    <input type="radio" name="uses" value="Self" id="self" className='form-radio-button' defaultChecked />
                     <label className='form-select-card-label' for="self">
                         <div className='form-select-card' id='form-select-card'>
                             <div className='form-select-card-icon'>

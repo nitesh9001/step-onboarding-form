@@ -26,7 +26,9 @@ function FourthForm({handleNext, displayName}) {
             <div className='form-completion-section'>
                 <div className='form-input-action-section'>
                     <button className='form-button' onClick={handleSubmit}>
-                       {isLoading ? <CircularProgress color='grey'/> : "Launch Eden"}
+                       {isLoading ? <CircularProgress color='grey' style={{
+                        zoom:.7
+                       }}/> : "Launch Eden"}
                     </button>
                 </div>
             </div>

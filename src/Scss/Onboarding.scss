@@ -66,9 +66,10 @@
 }
 
 //common scss 
+.default-result,
 .form-input-action-section {
   margin-top: 22px;
-
+  
   .form-button {
     @include button;
     width: 100%;
@@ -77,6 +78,10 @@
       opacity: .9;
     }
   }
+}
+
+.default-result-button{
+  margin-top: 22px;
 }
 
 .label-info{
