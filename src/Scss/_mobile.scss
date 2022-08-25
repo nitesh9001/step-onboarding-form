@@ -1,0 +1,30 @@
+@media only screen and (max-width: $mobile) {
+    .stepper-logo-section .stepper-action-ui {
+        max-width: 100% !important;
+    }
+
+    .stepper-warper {
+        grid-gap: 35px;
+    }
+
+    .steps-wrap:first-child {
+        &::after {
+           width: calc(90px * 2.5);
+        }
+    }
+    .form-completion-section,
+    .form-workspace-select-section,
+    .form-input-name-section{
+        width:96% !important;
+    }
+
+    @keyframes trans {
+        0% {
+            width: calc(90px * 0);
+        }
+
+        100% {
+            width: calc(90px * 2.5);
+        }
+    }
+}

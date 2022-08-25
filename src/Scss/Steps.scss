@@ -1,0 +1,58 @@
+.steps{
+    background-color: $backgroundColor;
+    padding: 10px 15px;
+    color: $text-color;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid $border-color;
+    transition:linear 300ms;
+    z-index: 100;
+}
+.steps-wrap{
+    z-index: 100;
+    @include display-block;
+    cursor: pointer;
+    // margin-right: 20px;
+    align-items: center;
+    position: relative;
+    .steps:hover{
+        animation: opacity 500ms linear;
+        @include selected-step;
+    }
+    .step-label{
+        position: absolute;
+        bottom: -20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+.steps-wrap:first-child{
+    &::after{
+    content: '';
+    padding: 1px;
+    top: 20px;
+    background-image: -webkitlinear-gradient(to right, $theme-color, $theme-color calc(33% * var(--perIndex) + 20px ), $border-color calc(33% * var(--perIndex)) , $border-color calc(100% - 33% * var(--perIndex))) ;
+    background-image: linear-gradient(to right, $theme-color, $theme-color calc(33% * var(--perIndex) + 40px), $border-color calc(33% * var(--perIndex)) , $border-color calc(100% - 33% * var(--perIndex))) ;
+    width: calc(90px * 4);
+    position: absolute;
+    left: 40px;
+    z-index: 4;
+    animation: trans 700ms linear;
+    }
+}
+
+@keyframes trans {
+    0% {width: calc(90px * 0);}
+    100% {width: calc(90px * 4);}
+}
+.active{
+    animation: opacity 500ms linear;
+    @include selected-step; 
+}
+
+@keyframes opacity {
+    0% {transform: rotate(20deg);}
+    50% {transform: rotate(-20deg);}
+    100% {opacity: rotate(0deg);}
+}

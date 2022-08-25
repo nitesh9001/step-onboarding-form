@@ -1,0 +1,109 @@
+@import url('https://rsms.me/inter/inter.css');
+@import './variables';
+@import './mixins';
+//form first 
+@import './FirstForm.scss';
+//form second
+@import './SecondForm.scss';
+//from third
+@import './ThirdForm.scss';
+//from fourth
+@import './FourthForm.scss';
+//stepper
+@import './Stepper.scss';
+//tablet media
+@import './tablet.scss';
+//mobile media
+@import './mobile.scss';
+
+// onbaodring scss
+.App-main-wrapper {
+  width: 100%;
+  background: $backgroundColor;
+  color: $text-color;
+}
+
+.stepper-form-box {
+  width: auto;
+  height: 65vh;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 25vh;
+  @include display-block;
+}
+
+.stepper-logo-section {
+  width: 100%;
+  margin-top: 40px;
+  @include display-block;
+
+  .logo-eden {
+    @include display-flex;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .logo-text-eden {
+      font-size: 28px;
+      font-weight: 700;
+      margin-left: 7px;
+      color: $text-color;
+    }
+  }
+
+  .stepper-action-ui {
+    max-width: 60%;
+    margin: 30px auto;
+  }
+}
+
+.tabs-switcher-form {
+  width: 80%;
+  text-align: center;
+  @include display-block;
+}
+
+//common scss 
+.form-input-action-section {
+  margin-top: 22px;
+
+  .form-button {
+    @include button;
+    width: 100%;
+    transition-duration: .9s;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+.label-info{
+ font-size: 16px;
+ font-weight: 600;
+ text-align: left !important;
+ justify-content: center;
+ align-items: flex-start;
+ padding: 5px;
+ span{
+  font-weight: 500;
+  color: $theme-color;
+ }
+}
+//animation
+.form-second,
+.form-third,
+.form-fourth,
+.form-first{
+  animation: animate linear 800ms;
+}
+@keyframes animate {
+  0% {
+    scale: .9;
+  }
+  100%{
+    scale: 1;
+  }
+}
+

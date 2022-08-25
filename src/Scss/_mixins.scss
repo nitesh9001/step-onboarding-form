@@ -1,0 +1,38 @@
+@mixin display-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin display-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin input-box {
+    height: 35px;
+    padding-left: 12px;
+    outline: none;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    font-weight: 600;
+}
+@mixin button {
+    height: 40px;
+    outline: none;
+    border: none;
+    background: $theme-color;
+    border-radius: 4px;
+    color: $backgroundColor;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@mixin selected-step {
+    color: white;
+    border: 2px solid $theme-color;
+    background-color: $theme-color;
+}

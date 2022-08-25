@@ -1,0 +1,9 @@
+@import './Steps.scss';
+
+.stepper-warper{
+   @include display-flex;
+   margin: 40px auto;
+   grid-gap: 80px;
+   margin-bottom: 50px;
+   justify-content: space-between;
+}

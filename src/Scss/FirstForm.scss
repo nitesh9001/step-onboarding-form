@@ -1,0 +1,47 @@
+//form first 
+.form-first{
+    @include display-block;
+  }
+  
+  .form-heading{
+    p{ 
+      font-size: 26px;
+      font-weight: 700;
+      color: $text-color;
+      line-height: 30px;
+      margin: 0px auto;
+    }
+  }
+  .form-title{
+    p{ 
+      font-size: 14px;
+      font-weight: 500;
+      color: grey;
+      margin: 5px auto;
+    }
+  }
+  .form-input-name-section{
+    width: 350px;
+    margin: 30px auto;
+    .form-input-displayname-section,
+    .form-input-fullname-section{
+      @include display-block;
+      align-items: flex-start;
+      .form-label{
+        font-size: 14px;
+        font-weight: 600;
+        color: $label-color;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+      .form-input{
+        width: 96%;
+        @include input-box;
+      }
+      .form-input::placeholder{
+        color: gray;
+        font-weight: 600;
+      }
+    }
+  }
