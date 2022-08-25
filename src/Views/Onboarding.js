@@ -68,10 +68,10 @@ const Onboarding = () => {
       default:
         return <div className='default-result'>
                   <h4>Enjoy coffee! While we setup for you</h4>
-                  <div className='label-info'>Full Name: <span>{fullName}</span></div>
-                  <div className='label-info'>Display Name: <span>{displayName}</span></div>
-                  <div className='label-info'>Workspace Name: <span>{workspaceName}</span></div>
-                  <div className='label-info'>Workspace URL: <span>{`www.eden.com/${workspaceURL}`}</span></div>
+                  <div className='label-info'>Full Name: <span>{fullName ? fullName: "Guest" }</span></div>
+                  <div className='label-info'>Display Name: <span>{displayName ? displayName : "happy-Guest"}</span></div>
+                  <div className='label-info'>Workspace Name: <span>{workspaceName ? workspaceName : "happy-Guest"}</span></div>
+                  <div className='label-info'>Workspace URL: <span>{`www.eden.com/${workspaceURL ? workspaceURL : "happy-Guest"}`}</span></div>
                   <div className='label-info'>Workspace Purpose: <span>{workspaceUses}</span></div>
                   <div className='default-result-button'>
                     <button className='form-button' onClick={handleReset}>Create New Workspace</button>
